@@ -1,0 +1,162 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400&display=swap');
+
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* font-family: 'Poppins', sans-serif; */
+/* font-family: 'Playfair Display', serif; */
+
+
+/* ======Page Not Found css======= */
+.pnf{
+  display:flex;
+  min-height: 65vh;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.pnf-title{
+  font-weight: 700;
+}
+.pnf-heading{
+  font-weight: 400;
+}
+.pnf a{
+  border: 1px solid black;
+  padding:10px;
+  margin-top:10px;
+}
+.pnf-btn{
+  text-decoration: none;
+  color:#000;
+
+}
+.pnf-btn:hover{
+  background-color: #0f0e0e;
+  color:azure;
+}
+
+
+/* navbar css */
+.navbar{
+  font-family:'Poppins', sans-serif;
+  font-size:15px;
+  line-height: 20px;
+  text-transform: uppercase;
+  box-shadow:0 8px 6px -6px  grey;
+    --webkit-box-shadow:0 8px 6px -6px  grey;
+  border-bottom: 0.5px solid grey !important;
+}
+
+.navbar-brand{
+  font-weight: 700;
+  font-family: system-ui,sans-serif;
+  letter-spacing: 2px;
+}
+
+
+ .nav-item .active{
+  border-bottom: 2px solid black;
+}
+
+
+/* footer css */
+
+.footer{
+
+  position: relative;
+  margin-bottom: 0;
+  width: 100%;
+  background-color: #000;
+  color: white;
+  text-align: center;
+  padding: 5px;
+}
+
+.footer a{
+  color:white;
+  text-decoration: none;
+  padding-left: 10px;
+  padding-right: 10px;
+ 
+}
+.footer a:hover{
+  color:#ffefba;
+  border-bottom: 1px solid #ffefba;
+}
+
+
+
+/* register form css */
+
+.form-container{
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height:90vh;
+  background-color: #ffdee9;
+  background-image: linear-gradient(0deg,#ffdee9,#b5fffc);
+  
+}
+.form-container form {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  padding:40px;
+  background:#fff;
+}
+.form-container form .title{
+  text-transform:uppercase;
+font-family: 'Playfair Display ',serif;
+font-weight: bold;
+margin-bottom: 15px;
+text-align: center;
+}
+
+.form-container form input {
+  border:none;
+  border-bottom: 1px solid #000;
+  border-radius: 0;
+  padding:5px;
+  margin:15px
+}
+.form-container form button{
+  border:1px solid black;
+  border-radius: 0;
+  background-color: #000;
+  text-transform: uppercase;
+  width:90%;
+  margin-top: 15px;
+}
+.form-container form button:hover{
+  border:1px solid black;
+  background: linear-gradient(
+    to right,
+    #434343,
+    #000000
+  );
+}
+
+/* admin Menu  */
+
+.admin-menu ul  {
+  list-style-type: none;
+}
+
+
+ /* create product */
+ .form-group{
+  margin:10px;
+ }
+
+ /* Products.js */
+ .product-link{
+  text-decoration: none;
+  color:black;
+ }
