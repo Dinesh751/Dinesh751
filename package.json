@@ -4,7 +4,9 @@
   "description": "Ecommerce rest api",
   "main": "server.js",
   "scripts": {
-    "start": "nodemon server.js"
+    
+    "frontend":"cd client && npm start",
+    "start": "concurrently \"nodemon server.js\" \"npm run frontend\""
   },
   "keywords": [],
   "author": "DineshBudime",
@@ -26,5 +28,8 @@
     "react-hot-toast": "^2.4.1",
     "react-toastify": "^9.1.3",
     "slugify": "^1.6.6"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
   }
 }
