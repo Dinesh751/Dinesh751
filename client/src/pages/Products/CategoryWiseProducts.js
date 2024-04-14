@@ -63,7 +63,7 @@ const CategoryWiseProducts = () => {
                   </div>
                   <div className="d-flex  ">
                     <button
-                      className="btn btn-primary m-1"
+                      className="btn btn-secondary m-1"
                       onClick={() => {
                         navigate(`/products/${e.slug}/${e._id}`);
                       }}
@@ -71,7 +71,7 @@ const CategoryWiseProducts = () => {
                       More Details
                     </button>
                     <button
-                      className="btn btn-secondary m-1"
+                      className="btn btn-warning m-1"
                       onClick={() => {
                         setCart([...cart, e]);
 

@@ -184,7 +184,7 @@ const navigate=useNavigate()
                  {products?.map((e) => (
                 <div
                   className="card m-2"
-                  style={{ width: "18rem" }}
+                  style={{ width: "16rem" }}
                   key={e._id}
                 >
                   <img
@@ -196,21 +196,22 @@ const navigate=useNavigate()
                     }}
                   />
                   <div className="card-body">
-                    <h5 className="card-title">Name:{e.name}</h5>
-                    <p className="card-text">Price: ${e.price}</p>
+                    <h6 className="card-title">Name: <b>{e.name}</b></h6>
+                    <p className="card-text">Price:  <b>${e.price}</b></p>
                     <p className="card-text">
-                      Description:{e.description.substring(0, 60)}....
+                      Description:
                     </p>
+                    {e.description.substring(0, 60)}....
                     
                    
                   </div>
-                  <div className="d-flex  ">
-                    <button className="btn btn-primary m-1" onClick={()=>{
+                  <div className="d-flex flex-column ">
+                    <button className="btn btn-secondary m-1" onClick={()=>{
                       navigate(`/products/${e.slug}/${e._id}`)
                     }}>
                       More Details
                     </button>
-                    <button className="btn btn-secondary m-1"
+                    <button className="btn btn-warning m-1"
                       onClick={()=>{
                         setCart([...cart,e])
                         

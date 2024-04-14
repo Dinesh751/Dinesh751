@@ -96,7 +96,7 @@ const CartPage = () => {
     <Layout>
       <div className="container">
         <div className="text-center m-3">
-          <h2>Hello - {auth.token ? `${auth?.user?.name}` : "User"}</h2>
+          <h2>Hello - <b>{auth.token ? `${auth?.user?.name}` : "User"}</b></h2>
         </div>
         <div className="text-center m-2">
           {`Your Cart Has  ${cart.length} Products`}
@@ -120,9 +120,9 @@ const CartPage = () => {
                   />
                 </div>
                 <div className="col-md-5 p-3">
-                  <p>{e.name}</p>
-                  <p> ${e.price}</p>
-                  <p>{e.description}</p>
+                  <p><b>{e.name}</b></p>
+                  <p><b>${e.price}</b> </p>
+                  <p>{e.description.substring(0, 60)}...</p>
                   <button
                     className="btn btn-danger"
                     onClick={() => {
@@ -151,9 +151,10 @@ const CartPage = () => {
               <p>Total | CheckOut | Payment</p>
 
               <hr />
-              <h4>Total :{totalPrice()}</h4>
+               <h4> Total : <b>{totalPrice()}</b></h4>
+               <br/>
               <h5>Current Address</h5>
-              <p>{auth?.token ? auth.user.address : ""}</p>
+              <p><b>{auth?.token ? auth.user.address : ""}</b></p>
               {auth?.token ? (
                 <>
                   <button

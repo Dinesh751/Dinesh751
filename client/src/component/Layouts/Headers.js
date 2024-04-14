@@ -37,9 +37,9 @@ const Header = () => {
       const { data } = await axios.get(
         `http://localhost:5000/products/search/${search.keyword}`
       );
-
-      setSearch({ ...search, results: data.products });
       navigate(`/products/search/${search.keyword}`);
+      setSearch({ ...search, results: data.products,keyword:""});
+    
     } catch (err) {
       console.log(err);
     }

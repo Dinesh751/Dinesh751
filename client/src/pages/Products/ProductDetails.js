@@ -73,17 +73,18 @@ const ProductDetails = () => {
               style={{ border: "none" }}
             >
               <div className="card-body">
-                <h5 className="card-title">Name: {product?.name}</h5>
-                <p className="card-text">Price: ${product?.price}</p>
-                <p className="card-text">Category: {product?.category?.name}</p>
+                <h5 className="card-title">Name: <b>{product?.name}</b> </h5>
+                <p className="card-text">Price: <b>${product?.price}</b></p>
+                <p className="card-text">Category: <b>{product?.category?.name}</b></p>
                 <p className="card-text">
-                  Description: {product?.description}....
+                  Description: 
                 </p>
+                {product?.description}
               </div>
             </div>
             <div className="text-center  ">
               <button
-                className="btn btn-secondary m-1"
+                className="btn btn-warning m-1"
                 onClick={() => {
                   setCart([...cart, product]);
                 }}
@@ -111,15 +112,16 @@ const ProductDetails = () => {
                   alt={e.name}
                 />
                 <div className="card-body">
-                  <h5 className="card-title">Name:{e.name}</h5>
-                  <p className="card-text">Price:{e.price}</p>
+                  <h5 className="card-title">Name: <b>{e.name}</b></h5>
+                  <p className="card-text">Price: <b>{e.price}</b></p>
                   <p className="card-text">
-                    Description:{e.description.substring(0, 60)}....
+                    Description:
                   </p>
+                  {e.description.substring(0, 60)}....
                 </div>
-                <div className="d-flex  ">
+                <div className="d-flex flex-column ">
                   <button
-                    className="btn btn-primary m-1"
+                    className="btn btn-secondary m-1"
                     onClick={() => {
                       navigate(`/products/${e.slug}/${e._id}`);
                     }}
@@ -127,7 +129,7 @@ const ProductDetails = () => {
                     More Details
                   </button>
                   <button
-                    className="btn btn-secondary m-1"
+                    className="btn btn-warning m-1"
                     onClick={() => {
                       setCart([...cart, e]);
 

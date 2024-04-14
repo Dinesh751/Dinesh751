@@ -46,7 +46,7 @@ const Products = () => {
                   className="product-link"
                   to={`/dashboard/admin/products/${e.slug}/${e._id}`}
                 >
-                  <div className="card m-2" style={{ width: "18rem" }}>
+                  <div className="card m-2" style={{ width: "16rem", height:"400px" }}>
                     <img
                       src={`http://localhost:5000/products/product-photo/${e._id}`}
                       className="img-responsive"
@@ -54,8 +54,10 @@ const Products = () => {
                      
                     />
                     <div className="card-body">
-                      <h5 className="card-title">Name:{e.name}</h5>
-                      <p className="card-text">Description:{e.description}</p>
+                      <h6 className="card-title">Name: <b>{e.name.substring(0, 10)}</b></h6>
+                      <p className="card-text">Description:</p>
+                      
+                      {e.description.substring(0, 60)}...
                     </div>
                   </div>
                 </Link>

@@ -15,13 +15,16 @@ const [search]=useSearch()
               {  search?.results?.map((e) => (
                 <div
                   className="card m-2"
-                  style={{ width: "18rem" }}
+                  style={{ width: "16rem", height:"500px" }}
                   key={e._id}
                 >
                   <img
                     src={`http://localhost:5000/products/product-photo/${e._id}`}
                     className="card-img-top"
                     alt={e.name}
+                    style={{
+                      height:"200px"
+                    }}
                   />
                   <div className="card-body">
                     <h5 className="card-title">Name:{e.name}</h5>
@@ -32,11 +35,11 @@ const [search]=useSearch()
                     
                    
                   </div>
-                  <div className="d-flex  ">
-                    <button className="btn btn-primary m-1">
+                  <div className="d-flex flex-column ">
+                    <button className="btn btn-secondary m-1">
                       More Details
                     </button>
-                    <button className="btn btn-secondary m-1">
+                    <button className="btn btn-warning m-1">
                       ADD TO CART
                     </button>
                   </div>
